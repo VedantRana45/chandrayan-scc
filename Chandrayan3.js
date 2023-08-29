@@ -56,6 +56,70 @@ class GalacticSpaceCraft {
         }
     }
 
+    moveLeft() {
+        switch (this.currDirection) {
+            case 'N':
+                this.currDirection = 'W';
+                this.prevDirection = 'N';
+                break;
+            case 'S':
+                this.currDirection = 'E';
+                this.prevDirection = 'S';
+                break;
+            case 'E':
+                this.currDirection = 'N';
+                this.prevDirection = 'E';
+                break;
+            case 'W':
+                this.currDirection = 'S';
+                this.prevDirection = 'W';
+                break;
+            case 'U':
+                {
+                    switch (this.prevDirection) {
+                        case 'N':
+                            this.currDirection = 'W';
+                            this.prevDirection = 'U';
+                            break;
+                        case 'S':
+                            this.currDirection = 'E';
+                            this.prevDirection = 'U';
+                            break;
+                        case 'E':
+                            this.currDirection = 'N';
+                            this.prevDirection = 'U';
+                            break;
+                        case 'W':
+                            this.currDirection = 'S';
+                            this.prevDirection = 'U';
+                            break;
+                    }
+                }
+                break;
+            case 'D':
+                {
+                    switch (this.prevDirection) {
+                        case 'N':
+                            this.currDirection = 'W';
+                            this.prevDirection = 'D';
+                            break;
+                        case 'S':
+                            this.currDirection = 'E';
+                            this.prevDirection = 'D';
+                            break;
+                        case 'E':
+                            this.currDirection = 'N';
+                            this.prevDirection = 'D';
+                            break;
+                        case 'W':
+                            this.currDirection = 'S';
+                            this.prevDirection = 'D';
+                            break;
+                    }
+                }
+                break;
+        }
+    }
 
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.currDirection}`;
