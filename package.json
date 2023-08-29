@@ -1,0 +1,14 @@
+{
+  "name": "chandrayan-3-gscc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Chandrayan3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vedant Rana",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.6.4"
+  }
+}
