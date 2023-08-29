@@ -33,6 +33,29 @@ class GalacticSpaceCraft {
         }
     }
 
+    moveBackward() {
+        switch (this.currDirection) {
+            case 'N':
+                this.coordinates.y--;
+                break;
+            case 'S':
+                this.coordinates.y++;
+                break;
+            case 'E':
+                this.coordinates.x--;
+                break;
+            case 'W':
+                this.coordinates.x++;
+                break;
+            case 'U':
+                this.coordinates.z--;
+                break;
+            case 'D':
+                this.coordinates.z++;
+                break;
+        }
+    }
+
 
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.currDirection}`;
