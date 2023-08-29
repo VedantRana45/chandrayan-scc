@@ -186,6 +186,16 @@ class GalacticSpaceCraft {
         }
     }
 
+    moveUpward() {
+        this.prevDirection = this.currDirection;
+        this.currDirection = 'U';
+    }
+
+    moveDownward() {
+        this.prevDirection = this.currDirection;
+        this.currDirection = 'D';
+    }
+
     getPosition() {
         return `Position : [ ${this.coordinates.x}, ${this.coordinates.y}, ${this.coordinates.z} ] Direction : ${this.currDirection}`;
     }
