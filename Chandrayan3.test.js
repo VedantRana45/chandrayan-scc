@@ -56,10 +56,19 @@ describe('Chandrayan3GSCC', () => {
         expect(result).toEqual('Position : [ 0, 1, 0 ] Direction : W');
     })
 
+
     test('space craft should move to left and forward 1 step correctly', () => {
         const c = new GalacticSpaceCraft({ x: 0, y: 0, z: 0 }, 'N');
         //this function getCoordinates will first change its direction to left then move 1 step forward 
         const result = c.getCoordinates(['l', 'f']);
         expect(result).toEqual('Position : [ -1, 0, 0 ] Direction : W');
+    })
+
+
+    test('space craft should move as per needed array of commands correctly', () => {
+        const c = new GalacticSpaceCraft({ x: 0, y: 0, z: 0 }, 'N');
+        //this function getCoordinates will first change its direction to left then move 1 step forward 
+        const result = c.getCoordinates(['f', 'r', 'u', 'b', 'l']);
+        expect(result).toEqual('Position : [ 0, 1, -1 ] Direction : N');
     })
 })
